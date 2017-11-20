@@ -1,21 +1,26 @@
 <p>This is a page to help demonstrate routing.</p>
 <!-- <button class="btn btn-primary" (click)="open = true">Show modal</button> -->
 <clr-modal [(clrModalOpen)]="open">
-  <h3 class="modal-title">I have a nice title</h3>
+  <h3 class="modal-title">Welcome to Creto</h3>
   <div class="modal-body">
-    <form>
-      <mat-form-field >
-        <input matInput placeholder="Favorite food" value="Sushi">
-      </mat-form-field>
-    
-      <mat-form-field>
-        <textarea matInput placeholder="Leave a comment"></textarea>
-      </mat-form-field>
-    </form>
+    <div>
+      <form>
+          <section class="form-block">
+            <div class="form-group">
+                <label for="aForm_1">Username</label>
+                <input matInput type="text" placeholder="username">
+              </div>
+            <div class="form-group">
+                <label for="aForm_1">Password</label>
+                <input matInput type="password" placeholder="password">
+            </div>
+          </section>
+      </form>
+    </div>
   </div>
   <div class="modal-footer">
-    <button type="button" mat-button (click)="open = false">Cancel</button>
-    <button type="button" class="btn btn-primary" (click)="open = false">Ok</button>
+    <button type="button" mat-button (click)="open = false">Home</button>
+    <button type="button" class="btn btn-primary" (click)="open = false">Login</button>
   </div>
 </clr-modal>
 <button mat-button>My Button</button>

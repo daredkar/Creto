@@ -1,18 +1,24 @@
 <clr-main-container>
-  <clr-header>
-    <div class="branding">
-      <a href="#" class="nav-link">
-        <span class="clr-icon clr-clarity-logo"></span>
-        <span class="title">Clarity</span>
-      </a>
-    </div>
-      <div class="header-nav" [clr-nav-level]="1">
-          <a class="nav-link" href="#" [routerLink]="['/home']" routerLinkActive="active"><span class="nav-text">Home</span></a>
-          <a class="nav-link" href="#" [routerLink]="['/about']" routerLinkActive="active"><span class="nav-text">About</span></a>
+  <header class="header-6">
+      <div class="branding">
+          <a href="#" class="nav-link">
+              <span class="clr-icon clr-clarity-logo"></span>
+              <span class="title">Clarity</span>
+          </a>
       </div>
-    <div class="header-actions">
-    </div>
-  </clr-header>
+      <div class="header-nav">
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active" *ngIf="loggedIn"><span class="nav-text">Home</span></a>
+          <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active" *ngIf="loggedIn"><span class="nav-text">About</span></a>
+      </div>
+      <div class="header-actions">
+          <a href="javascript://" class="nav-link nav-icon">
+              <clr-icon shape="logout" (click)="logout()"></clr-icon>
+          </a>
+          <a href="javascript://" class="nav-link nav-icon">
+            <clr-icon shape="mouse" (click)="login()"></clr-icon>             
+          </a>
+      </div>
+  </header>
   <div class="content-container">
     <div class="content-area">
       <router-outlet></router-outlet>

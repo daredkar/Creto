@@ -10,7 +10,7 @@ import { HomeComponent } from "./app-component/home/home.component";
 import { AboutComponent } from "./app-component/about/about.component";
 import { ComponentModule } from "./app-component/component.module";
 import 'hammerjs';
-import { MaterialModule } from "./material.module";
+// import { MaterialModule } from "./material.module";
 
 @NgModule({
     declarations: [
@@ -24,7 +24,7 @@ import { MaterialModule } from "./material.module";
         ClarityModule,
         ROUTING,
         ComponentModule,
-        MaterialModule
+        // MaterialModule
     ],
     providers: [],
     bootstrap: [AppComponent]
