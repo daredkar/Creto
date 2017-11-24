@@ -1,7 +1,7 @@
 {
-  "name": "clarity-seed",
+  "name": "Creto App",
   "version": "0.10.0",
-  "description": "Angular-CLI starter for a Clarity project",
+  "description": "Creto Org",
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
