@@ -1,47 +1,80 @@
 <div class="main-container">
   <div class="content-container">
       <div class="content-area">
-        <clr-tabs>
-          <clr-tab>
-              <button clrTabLink>Dashboard</button>
-              <clr-tab-content id="dashboard" *clrIfActive="true">
-                  <button class="btn btn-icon btn-primary">
-                    <clr-icon shape="plus"></clr-icon>
-                  </button>
-                </clr-tab-content>
-          </clr-tab>
-          <clr-tab>
-              <button clrTabLink>To do</button>
-              <clr-tab-content id="todo" *clrIfActive>
-              To do
-              </clr-tab-content>
-          </clr-tab>
-      </clr-tabs>
+<!-- please add here the content of the page -->
+<clr-modal [(clrModalOpen)]="open" [clrModalClosable]="true">
+        <h3 class="modal-title">Welcome to Creto</h3>
+        <div class="modal-body">
+          <div>
+            <form>
+                <section class="form-block">
+                  <div class="form-group">
+                      <label for="aForm_1">Username</label>
+                      <input matInput type="text" placeholder="username" >
+                    </div>
+                  <div class="form-group">
+                      <label for="aForm_1">Password</label>
+                      <input matInput type="password" placeholder="password" >
+                  </div>
+                  <div class="form-group">
+                      <label for="selects_1">Select Domain</label>
+                      <div class="select">
+                          <select id="selects_1">
+                              <option>Sheduler user</option>
+                              <option>C2C</option>
+                              <option>Admin</option>
+                          </select>
+                      </div>
+                  </div>
+                </section>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+      </clr-modal>
+
       </div>
-      <clr-vertical-nav [clrVerticalNavCollapsible]="false" [(clrVerticalNavCollapsed)]="collapsed">
-          <a clrVerticalNavLink routerLink="./normal" routerLinkActive="active">
-              <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
-              Normal
-          </a>
-          <a clrVerticalNavLink routerLink="./electric" routerLinkActive="active">
-              <clr-icon clrVerticalNavIcon shape="bolt"></clr-icon>
-              Electric
-          </a>
+<!-- Below is implementation of SideNav  -->
+      <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="Collapse" [clrVerticalNavCollapsible]="demoCollapsible">
+            <clr-vertical-nav-group
+            routerLinkActive="active">
+            <clr-icon shape="user" clrVerticalNavIcon class="is-solid"></clr-icon>
+                 My task
+                <clr-vertical-nav-group-children>
+                    <a clrVerticalNavLink
+                    routerLink="./fire/charmander"
+                    routerLinkActive="active" (click)="openAddTask()"><clr-icon clrVerticalNavIcon shape="plus" style="color: blue"></clr-icon>
+                    Add task
+                    </a>
+                    <a clrVerticalNavLink
+                    routerLink="./fire/charizard"
+                    routerLinkActive="active"><clr-icon clrVerticalNavIcon shape="trash" style="color: red"></clr-icon>
+                    Delete task
+                    </a>
+                </clr-vertical-nav-group-children>
+          </clr-vertical-nav-group>
+          <clr-vertical-nav-group
+          routerLinkActive="active">
+          <clr-icon shape="users" clrVerticalNavIcon class="is-solid" style="color:green"></clr-icon>
+               Team
+              <clr-vertical-nav-group-children>
+                  <a clrVerticalNavLink
+                  routerLink="./fire/charmander"
+                  routerLinkActive="active"><clr-icon clrVerticalNavIcon shape="plus" style="color: blue"></clr-icon>
+                  Add task
+                  </a>
+                  <a clrVerticalNavLink
+                  routerLink="./fire/charizard"
+                  routerLinkActive="active"><clr-icon clrVerticalNavIcon shape="trash" style="color: red"></clr-icon>
+                  Delete task
+                  </a>
+              </clr-vertical-nav-group-children>
+        </clr-vertical-nav-group>
           <a clrVerticalNavLink routerLink="./poison" routerLinkActive="active">
-              <clr-icon clrVerticalNavIcon shape="sad-face"></clr-icon>
-              Poison
-          </a>
-          <a clrVerticalNavLink routerLink="./grass" routerLinkActive="active">
-              <clr-icon clrVerticalNavIcon shape="bug"></clr-icon>
-              Grass
-          </a>
-          <a clrVerticalNavLink routerLink="./fighting" routerLinkActive="active">
-              <clr-icon clrVerticalNavIcon shape="shield"></clr-icon>
-              Fighting
-          </a>
-          <a clrVerticalNavLink routerLink="./credit" routerLinkActive="active">
-              <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
-              Credit
+              <clr-icon clrVerticalNavIcon shape="dollar" class="is-solid"></clr-icon>
+              Billable Cycle
           </a>
     </clr-vertical-nav>
   </div>
