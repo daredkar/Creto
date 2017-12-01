@@ -1,6 +1,7 @@
 import { HttpModule, Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 
 @Component({
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(private rout: Router, private fb: FormBuilder) {
     this.loginForm = fb.group({
       'username': [null, Validators.required],
-      'password': [null, Validators.compose([Validators.minLength(10), Validators.maxLength(50),  Validators.required])]
+      'password': [null, Validators.compose([Validators.minLength(2), Validators.maxLength(5),  Validators.required])]
     });
   }
 
@@ -27,7 +28,7 @@ export class LoginComponent implements OnInit {
 
   login(form) {
     this.open = false;
-    if (form.username === 'darshan' && form.password === 'darshan') {
+    if (form.username === 'admin' && form.password === 'admin') {
       localStorage.setItem('loggedIn', 'true');
       let some = localStorage.getItem('loggedIn');
       this.rout.navigate(['home']);

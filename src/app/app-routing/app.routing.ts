@@ -5,13 +5,16 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AboutComponent } from '../app-component/about/about.component';
 import { HomeComponent } from '../app-component/home/home.component';
+import { TaskViewComponent } from '../app-component/task-view/task-view.component';
+import { AuthGuard } from 'app/app-guard/auth.guard';
 
 
 export const ROUTES: Routes = [
     // {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
-    {path: 'about', component: AboutComponent},
-    {path: 'main', component: AppComponent},
+    {path: 'about', component: AboutComponent, canActivate: [AuthGuard]},
+    {path: 'main', component: AppComponent, canActivate: [AuthGuard]},
+    {path: 'task', component: TaskViewComponent, canActivate: [AuthGuard]},
     {path: '', component: LoginComponent}
 ];
 

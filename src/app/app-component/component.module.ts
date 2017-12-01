@@ -7,16 +7,26 @@ import { AboutComponent } from "./about/about.component";
 import "hammerjs";
 import { LoginComponent } from './login/login.component';
 
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { TaskViewComponent } from './task-view/task-view.component';
+import { AuthGuard } from 'app/app-guard/auth.guard';
+
 @NgModule({
   imports: [
     CommonModule,
     ClarityModule,
-    ROUTING
+    ROUTING,
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [
     HomeComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
+    TaskViewComponent
+  ],
+  providers: [
+    AuthGuard
   ]
 })
 export class ComponentModule { }
