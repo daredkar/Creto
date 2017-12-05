@@ -1,6 +1,0 @@
-export enum Role {
-ADMIN = "ADMIN",
-C2C_USER= "C2C_USER",
-TASK_USER= "TASK_USER",
-TASK_ADMIN= "TASK_ADMIN"
-}

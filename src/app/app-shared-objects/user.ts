@@ -1,6 +1,12 @@
-import {Role} from "./role";
+// import {Role} from "./role";
+
 export class User {
     id: number;
     name: string;
-    role: Role;
+    role: string;
+
+    constructor() {}
+    getid() {
+        let some  = this
+    }
 }
