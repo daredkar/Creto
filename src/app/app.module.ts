@@ -10,7 +10,10 @@ import { ROUTING } from "./app-routing/app.routing";
 import { HomeComponent } from "./app-component/home/home.component";
 import { AboutComponent } from "./app-component/about/about.component";
 import { ComponentModule } from "./app-component/component.module";
+import { AngularFireModule } from "angularfire2";
 import 'hammerjs';
+import { environment } from 'environments/environment';
+import { AngularFireDatabaseModule } from "angularfire2/database";
 
 @NgModule({
     declarations: [
@@ -23,7 +26,9 @@ import 'hammerjs';
         HttpModule,
         ClarityModule,
         ROUTING,
-        ComponentModule
+        ComponentModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireDatabaseModule
     ],
     providers: [AuthGuard],
     bootstrap: [AppComponent]

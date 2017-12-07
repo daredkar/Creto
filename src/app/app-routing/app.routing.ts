@@ -7,14 +7,16 @@ import { AboutComponent } from '../app-component/about/about.component';
 import { HomeComponent } from '../app-component/home/home.component';
 import { TaskViewComponent } from '../app-component/task-view/task-view.component';
 import { AuthGuard } from 'app/app-guard/auth.guard';
+import { DashboardComponent } from 'app/app-component/dashboard/dashboard.component';
 
 
 export const ROUTES: Routes = [
     // {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'about', component: AboutComponent, canActivate: [AuthGuard]},
-    {path: 'main', component: AppComponent, canActivate: [AuthGuard]},
+    {path: 'document', component: AppComponent, canActivate: [AuthGuard]},
     {path: 'task', component: TaskViewComponent, canActivate: [AuthGuard]},
+    {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
     {path: '', component: LoginComponent}
 ];
 
