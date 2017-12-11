@@ -1,24 +1,27 @@
 <!doctype html>
-<html>
+<html style="background-color: black">
 <head>
     <meta charset="utf-8">
     <title>Creto</title>
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="icon" type="image/x-icon" href="favicon.ico?v=2"> -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
 </head>
 <body>
 <my-app>
-    <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-            <span class="spinner spinner-inverse"></span>
-            <span><h3>Loading..</h3></span></my-app>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-        </div>
-    </div>
+    <div style="position: absolute;
+                height: 100px;
+                width: 100px;
+                top: 50%;
+                left: 50%;
+                margin-left: -50px;
+                margin-top: -50px;
+                background-size: 100%;">
+                <!-- <span class="spinner spinner-inverse"></span> -->
+                <span><clr-icon shape="cloud" style="color: red" size="100"></clr-icon></span> 
+                </div>               
+</my-app>
 </body>
 </html>
