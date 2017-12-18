@@ -14,6 +14,7 @@ import { AuthGuard } from 'app/app-guard/auth.guard';
 import { AngularFireModule } from "angularfire2";
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AboutComponent,
     LoginComponent,
     TaskViewComponent,
-    DashboardComponent
+    DashboardComponent,
+    KnowledgeBaseComponent
   ],
   providers: [
     AuthGuard

@@ -14,6 +14,7 @@ import { AngularFireModule } from "angularfire2";
 import 'hammerjs';
 import { environment } from 'environments/environment';
 import { AngularFireDatabaseModule } from "angularfire2/database";
+import { AngularFirestoreModule } from "angularfire2/firestore";
 
 @NgModule({
     declarations: [
@@ -28,6 +29,7 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
         ROUTING,
         ComponentModule,
         AngularFireModule.initializeApp(environment.firebase),
+        AngularFirestoreModule.enablePersistence(),
         AngularFireDatabaseModule
     ],
     providers: [AuthGuard],

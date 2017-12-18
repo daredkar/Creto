@@ -1,3 +1,4 @@
+import { KnowledgeBaseComponent } from './../app-component/knowledge-base/knowledge-base.component';
 import { LoginComponent } from './../app-component/login/login.component';
 import { AppComponent } from './../app.component';
 import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
@@ -17,6 +18,7 @@ export const ROUTES: Routes = [
     {path: 'document', component: AppComponent, canActivate: [AuthGuard]},
     {path: 'task', component: TaskViewComponent, canActivate: [AuthGuard]},
     {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+    {path: 'knowledge', component: KnowledgeBaseComponent, canActivate: [AuthGuard]},
     {path: '', component: LoginComponent}
 ];
 

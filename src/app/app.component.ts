@@ -10,6 +10,7 @@ import { OnChanges, DoCheck } from '@angular/core/src/metadata/lifecycle_hooks';
 export class AppComponent implements OnInit, OnChanges, DoCheck {
     open: Boolean = true;
     loggedIn: boolean = false;
+    taskNavStatus: boolean = false;
     constructor(private router: Router) {
         console.log(localStorage.getItem('loggedIn'));
     }
@@ -31,6 +32,7 @@ export class AppComponent implements OnInit, OnChanges, DoCheck {
     logout() {
         localStorage.setItem('loggedIn', 'false');
         this.loggedIn = false;
+        this.taskNavStatus = false;
         console.log(localStorage.getItem('loggedIn'));
         this.router.navigate(['']);
     }
@@ -40,8 +42,14 @@ export class AppComponent implements OnInit, OnChanges, DoCheck {
         this.router.navigate(['home']);
         console.log(some);
       }
-      home() {
+    home() {
         this.open = false;
         this.router.navigate(['home']);
       }
+    enableTaskNav() {
+        this.taskNavStatus = true;
+    }
+    disableTaskNav() {
+        this.taskNavStatus = false;
+    }
 }
