@@ -1,3 +1,4 @@
-<p>
-  knowledge-base works!
-</p>
+<ul *ngFor="let user of users | async">
+  <li>name : {{user.name}}</li>
+  <li>role : {{user.role}}</li>
+</ul> 

@@ -2,6 +2,7 @@ export class User {
     private _id: number;
     private _name: string;
     private _role: string;
+    private _password: string;
 
     constructor() {}
     get id(): number {
@@ -21,5 +22,11 @@ export class User {
     }
     set role(role: string) {
         this._role = role;
+    }
+    get password(){
+        return this._password;
+    }
+    set password(password: string){
+        this._password = password
     }
 }

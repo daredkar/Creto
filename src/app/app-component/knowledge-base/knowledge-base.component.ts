@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from "angularfire2/database";
-import { AngularFirestore } from "angularfire2/firestore";
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from "angularfire2/firestore";
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import { User } from 'app/app-shared-objects/user';
+
+// interface User {
+//   name: string;
+//   role: string;
+// }
 
 @Component({
   selector: 'app-knowledge-base',
@@ -9,11 +17,15 @@ import { AngularFirestore } from "angularfire2/firestore";
 })
 export class KnowledgeBaseComponent implements OnInit {
 
-  constructor(private db: AngularFireDatabase) {
-    db.list('/users')
-   }
+  userCollection: AngularFirestoreCollection<User>;
+  users: Observable<User[]>;
+
+  constructor(private afs: AngularFirestore) {}
 
   ngOnInit() {
+    this.userCollection = this.afs.collection('users');
+    this.users = this.userCollection.valueChanges();
+    console.log(this.users.subscribe(res => console.log(res)));
   }
 
 }
