@@ -2,3 +2,18 @@
   <li>name : {{user.name}}</li>
   <li>role : {{user.role}}</li>
 </ul> 
+
+<clr-tabs>
+    <clr-tab>
+        <button clrTabLink id="link1">Tab1</button>
+        <clr-tab-content id="content1" *clrIfActive>
+        ...
+        </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+        <button clrTabLink>Tab2</button>
+        <clr-tab-content *clrIfActive="true">
+        ...
+        </clr-tab-content>
+    </clr-tab>
+</clr-tabs>

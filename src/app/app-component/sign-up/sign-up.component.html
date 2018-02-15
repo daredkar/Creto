@@ -1,0 +1,52 @@
+<label class="title">
+    <h3 class="welcome">Welcome to Creto</h3>
+    <h5 class="hint">Please Register Account</h5>
+</label>
+<form [formGroup]="registerForm">
+    <section class="form-block">
+      <div class="form-group">
+          <label >Name</label>
+          <input matInput type="text" placeholder="please write name" formControlName="name">
+      </div>
+      <div class="form-group">
+          <label >Username</label>
+          <input matInput type="text" placeholder="username" formControlName="username">
+      </div>
+      <div class="form-group">
+          <label >Password</label>
+          <input matInput type="password" placeholder="password" formControlName="password">
+      </div>
+      <div class="form-group">
+          <label >Select Team</label>
+          <div class="select">
+              <select id="team" formControlName="team">
+                  <option>EAD</option>
+                  <option>DB</option>
+                  <option>SFDC</option>
+                  <option>C2C</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label >Select Role</label>
+          <div class="select">
+              <select id="role" formControlName="role">
+                  <option>User</option>
+                  <option>Manager</option>
+                  <option>Lead</option>
+                  <option>Admin</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label >Area of Work</label>
+          <div class="select">
+              <select id="area_work" formControlName="area_work">
+                  <option>Capex</option>
+                  <option>Opex</option>
+              </select>
+          </div>
+      </div>
+    </section>
+    <button class="btn btn-primary" type="submit">Register</button>
+</form>

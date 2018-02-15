@@ -12,6 +12,9 @@ export class LoginService {
 
     return true
   }
+  private validateUser() {
+
+  }
 
   logout() {
 

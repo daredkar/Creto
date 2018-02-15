@@ -15,6 +15,7 @@ import { AngularFireModule } from "angularfire2";
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.componen
     LoginComponent,
     TaskViewComponent,
     DashboardComponent,
-    KnowledgeBaseComponent
+    KnowledgeBaseComponent,
+    SignUpComponent
   ],
   providers: [
     AuthGuard
