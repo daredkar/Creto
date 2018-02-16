@@ -23,5 +23,7 @@ export class SignUpComponent implements OnInit {
   }
   ngOnInit() {
   }
-
+  login() {
+    this.rout.navigate(['']);
+  }
 }

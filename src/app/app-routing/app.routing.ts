@@ -15,13 +15,13 @@ import { DashboardComponent } from 'app/app-component/dashboard/dashboard.compon
 
 export const ROUTES: Routes = [
     // {path: '', redirectTo: 'home', pathMatch: 'full'},
-    {path: 'home', component: HomeComponent},
+    {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
     {path: 'about', component: AboutComponent, canActivate: [AuthGuard]},
     {path: 'document', component: AppComponent, canActivate: [AuthGuard]},
     {path: 'task', component: TaskViewComponent, canActivate: [AuthGuard]},
     {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
     {path: 'knowledge', component: KnowledgeBaseComponent, canActivate: [AuthGuard]},
-    {path: 'register', component: SignUpComponent, canActivate: [AuthGuard]},
+    {path: 'register', component: SignUpComponent},
     {path: '', component: LoginComponent}
 ];
 

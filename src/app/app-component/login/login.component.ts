@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
 
   home() {
     this.open = false;
-    this.rout.navigate(['home']);
+    this.rout.navigate(['register']);
   }
   private validateUser(name, pass) {
 
