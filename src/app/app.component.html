@@ -8,23 +8,23 @@
       </a>
     </div>
       <div class="header-nav" [clr-nav-level]="1">
-        <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active" *ngIf="loggedIn" (click)="disableTaskNav()"><span class="nav-text">Home</span></a>            
-        <a class="nav-link" [routerLink]="['/task']" routerLinkActive="active" *ngIf="loggedIn" (click)="enableTaskNav()"><span class="nav-text" >Task Tracking</span></a>                
-        <a class="nav-link" [routerLink]="['/knowledge']" routerLinkActive="active" *ngIf="loggedIn" (click)="disableTaskNav()"><span class="nav-text">Knowledge Base</span></a>        
+        <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active" *ngIf="loggedIn" (click)="disableTaskNav()"><span class="nav-text">Home</span></a>
+        <a class="nav-link" [routerLink]="['/task']" routerLinkActive="active" *ngIf="loggedIn" (click)="enableTaskNav()"><span class="nav-text" >Task Tracking</span></a>
+        <a class="nav-link" [routerLink]="['/knowledge']" routerLinkActive="active" *ngIf="loggedIn" (click)="disableTaskNav()"><span class="nav-text">Knowledge Base</span></a>
       </div>
     <div class="header-actions">
             <a href="javascript://" class="nav-link nav-icon" *ngIf="loggedIn">
                 <clr-icon shape="logout" style="color: rgb(255, 0, 212)" (click)="logout()"></clr-icon>
             </a>
             <a href="javascript://" class="nav-link nav-icon" *ngIf="!loggedIn">
-              <clr-icon shape="mouse" style="color: rgb(193, 245, 4)" (click)="login()"></clr-icon>             
+              <clr-icon shape="mouse" style="color: rgb(193, 245, 4)" (click)="login()"></clr-icon>
             </a>
     </div>
   </clr-header>
   <div class="content-container">
-      <clr-vertical-nav *ngIf="taskNavStatus && loggedIn" [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="Collapse" [clrVerticalNavCollapsible]="demoCollapsible">
+      <clr-vertical-nav *ngIf="loggedIn" [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="Collapse" [clrVerticalNavCollapsible]="demoCollapsible">
           <clr-vertical-nav-group
-          routerLinkActive="active">
+          routerLinkActive="active" *ngIf="taskNavStatus">
           <clr-icon shape="user" clrVerticalNavIcon class="is-solid"></clr-icon>
                My task
               <clr-vertical-nav-group-children>
@@ -46,7 +46,7 @@
               </clr-vertical-nav-group-children>
         </clr-vertical-nav-group>
         <clr-vertical-nav-group
-        routerLinkActive="active">
+        routerLinkActive="active" *ngIf="taskNavStatus">
         <clr-icon shape="users" clrVerticalNavIcon class="is-solid" style="color:green"></clr-icon>
              Team
             <clr-vertical-nav-group-children>
@@ -72,7 +72,7 @@
           </a>
           <a clrVerticalNavLink routerLink="./poison" routerLinkActive="active">
               <clr-icon clrVerticalNavIcon shape="lightbulb" class="is-solid" style="color: goldenrod"></clr-icon>
-              Remind me  
+              Remind me
           </a>
   </clr-vertical-nav>
     <div class="content-area">
