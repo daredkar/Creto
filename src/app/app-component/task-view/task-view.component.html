@@ -4,22 +4,61 @@
 <br><br>
 
 <clr-modal [(clrModalOpen)]="open">
-    <h3 class="modal-title">Welcome to Creto</h3>
+    <h3 class="modal-title">Task Creation</h3>
     <div class="modal-body">
       <div>
         <form [formGroup]="addTaskForm">
-            <section class="form-block">
-              <div class="form-group">
-                  <label for="aForm_1">Username</label>
-                  <input matInput type="text" placeholder="username" >
+              <section class="form-block">
+                <div class="form-group">
+                    <label >Title</label>
+                    <input matInput type="text" placeholder="please write title" formControlName="title">
                 </div>
+                <div class="form-group">
+                    <label >Description</label>
+                    <textarea matInput placeholder="description" formControlName="description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label >Assignee</label>
+                    <input matInput type="text" placeholder="assignee" formControlName="assignee">
+                </div>
+               <div class="form-group">
+                  <label >Start Date</label>
+                  <input matInput type="date" placeholder="Start Date" formControlName="startDate">
+              </div>
               <div class="form-group">
-                  <label for="aForm_1">Password</label>
-                  <input matInput type="password" placeholder="password" >
-              </div><br><br>
-              <!-- <button type="submit" class="btn btn-primary" (click)="login(loginForm.value)" [disabled]="!loginForm.valid">Login</button>
-              <button type="button" class="btn btn-info-outline" (click)="home()">Register User</button> -->
-
+                <label >Status</label>
+                <input matInput type="text" placeholder="Status of the task" formControlName="status">
+             </div>
+             <div class="form-group">
+              <label >Type</label>
+              <div class="select">
+                <select id="type" formControlName="type">
+                    <option>Support</option>
+                    <option>Maintainance</option>
+                    <option>CR</option>
+                    <option>MIO</option>
+                    <option>NBT</option>
+                </select>
+            </div>
+            
+            </div>
+            <div class="form-group">
+              <label >Dependency</label>
+              <input matInput type="text" placeholder="Dependency From other team" formControlName="dependency">
+            </div>
+                <!-- </d iv> -->
+                <div class="form-group">
+                    <label >Area of Work</label>
+                    <div class="select">
+                        <select id="area_work" formControlName="area_work">
+                            <option>Capex</option>
+                            <option>Opex</option>
+                        </select>
+                    </div>
+                </div>
+             <div align="center">
+             <button class="btn btn-primary" type="submit" >Create Task</button>
+             </div>
             </section>
         </form>
       </div>
