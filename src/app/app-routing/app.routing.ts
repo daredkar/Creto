@@ -10,6 +10,8 @@ import { HomeComponent } from '../app-component/home/home.component';
 import { TaskViewComponent } from '../app-component/task-view/task-view.component';
 import { AuthGuard } from 'app/app-guard/auth.guard';
 import { DashboardComponent } from 'app/app-component/dashboard/dashboard.component';
+import { TrackHoursComponent } from '../app-component/track-hours/track-hours.component';
+import { DiscussionWindowComponent } from '../app-component/discussion-window/discussion-window.component';
 
 
 
@@ -21,6 +23,8 @@ export const ROUTES: Routes = [
     {path: 'task', component: TaskViewComponent, canActivate: [AuthGuard]},
     {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
     {path: 'knowledge', component: KnowledgeBaseComponent, canActivate: [AuthGuard]},
+    {path: 'track_hours', component: TrackHoursComponent, canActivate: [AuthGuard]},
+    {path: 'discuss', component: DiscussionWindowComponent, canActivate: [AuthGuard]},
     {path: 'register', component: SignUpComponent},
     {path: '', component: LoginComponent}
 ];
