@@ -10,12 +10,14 @@ import { LoginComponent } from './login/login.component';
 
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { TaskViewComponent } from './task-view/task-view.component';
-import { AuthGuard } from 'app/app-guard/auth.guard';
+import { AuthGuard } from './../app-guard/auth.guard';
 import { AngularFireModule } from "angularfire2";
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { TrackHoursComponent } from './track-hours/track-hours.component';
+import { DiscussionWindowComponent } from './discussion-window/discussion-window.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     TaskViewComponent,
     DashboardComponent,
     KnowledgeBaseComponent,
-    SignUpComponent
+    SignUpComponent,
+    TrackHoursComponent,
+    DiscussionWindowComponent
   ],
   providers: [
     AuthGuard

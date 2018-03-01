@@ -11,6 +11,7 @@
         <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active" *ngIf="loggedIn" (click)="disableTaskNav()"><span class="nav-text">Home</span></a>
         <a class="nav-link" [routerLink]="['/task']" routerLinkActive="active" *ngIf="loggedIn" (click)="enableTaskNav()"><span class="nav-text" >Task Tracking</span></a>
         <a class="nav-link" [routerLink]="['/knowledge']" routerLinkActive="active" *ngIf="loggedIn" (click)="disableTaskNav()"><span class="nav-text">Knowledge Base</span></a>
+        <a class="nav-link" [routerLink]="['/track_hours']" routerLinkActive="active" *ngIf="loggedIn" (click)="disableTaskNav()"><span class="nav-text">Hours Tracking</span></a>
       </div>
     <div class="header-actions">
             <a href="javascript://" class="nav-link nav-icon" *ngIf="loggedIn">
@@ -28,11 +29,11 @@
           <clr-icon shape="user" clrVerticalNavIcon class="is-solid"></clr-icon>
                My task
               <clr-vertical-nav-group-children>
-                  <a clrVerticalNavLink
+                  <!-- <a clrVerticalNavLink
                   routerLink="./fire/charmander"
                   routerLinkActive="active" (click)="openAddTask()"><clr-icon clrVerticalNavIcon shape="plus" style="color: blue"></clr-icon>
                   Add task
-                  </a>
+                  </a> -->
                   <a clrVerticalNavLink
                   routerLink="./fire/charizard"
                   routerLinkActive="active"><clr-icon clrVerticalNavIcon shape="dashboard" style="color: rgb(133, 228, 228)"></clr-icon>
@@ -66,7 +67,7 @@
               <clr-icon clrVerticalNavIcon shape="dollar" class="is-solid" ></clr-icon>
               Billable Cycle
           </a>
-          <a clrVerticalNavLink routerLink="./poison" routerLinkActive="active">
+          <a clrVerticalNavLink [routerLink]="['/discuss']" routerLinkActive="active">
               <clr-icon clrVerticalNavIcon shape="chat-bubble" class="is-solid" style="color: navy"></clr-icon>
               Discussion window
           </a>
