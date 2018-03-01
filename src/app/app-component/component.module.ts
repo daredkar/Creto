@@ -17,6 +17,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
+
 @NgModule({
   imports: [
     CommonModule,
