@@ -19,6 +19,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { TrackHoursComponent } from './track-hours/track-hours.component';
 import { DiscussionWindowComponent } from './discussion-window/discussion-window.component';
 
+
 @NgModule({
   imports: [
     CommonModule,

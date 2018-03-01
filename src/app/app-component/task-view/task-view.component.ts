@@ -13,7 +13,18 @@ export class TaskViewComponent implements OnInit {
 
   open: boolean = false;
   addTaskForm: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder) {
+    this.addTaskForm = fb.group({
+      'title':[null, Validators.required],
+      'description':[null, Validators.required],
+      'assignee':[null, Validators.required],
+      'startDate':[null, Validators.required],
+      'status':[null, Validators.required],
+      'type':[null, Validators.required],      
+      'dependency':[null, Validators.required],
+      'area_work':[null, Validators.required]
+    });
+   }
 
   ngOnInit() {
   }
