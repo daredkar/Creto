@@ -2,7 +2,9 @@ import { HttpModule, Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';  
+import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms'; 
+import {NgbAccordionConfig} from '@ng-bootstrap/ng-bootstrap';
+ 
 
 @Component({
   selector: 'app-task-view',
@@ -13,7 +15,7 @@ export class TaskViewComponent implements OnInit {
 
   open: boolean = false;
   addTaskForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, config: NgbAccordionConfig) {
     this.addTaskForm = fb.group({
       'title':[null, Validators.required],
       'description':[null, Validators.required],
@@ -24,6 +26,8 @@ export class TaskViewComponent implements OnInit {
       'dependency':[null, Validators.required],
       'area_work':[null, Validators.required]
     });
+    config.closeOthers = true;
+    config.type = 'info';   
    }
 
   ngOnInit() {

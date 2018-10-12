@@ -1,10 +1,6 @@
-<button class="btn btn-icon" (click)="openAddTask()"><clr-icon shape="plus"></clr-icon></button>
-<button class="btn btn-icon btn-primary"><clr-icon shape="pencil"></clr-icon></button>
-<button class="btn btn-icon btn-danger"><clr-icon shape="trash"></clr-icon></button>
-<br><br>
 
-<clr-modal [(clrModalOpen)]="open">
-    <h3 class="modal-title">Task Creation</h3>
+<clr-modal [(clrModalOpen)]="open" [clrModalSize]="'lg'">
+    <h3 class="modal-title"><strong>Task Creation</strong></h3>
     <div class="modal-body">
       <div>
         <form [formGroup]="addTaskForm">
@@ -40,7 +36,7 @@
                     <option>NBT</option>
                 </select>
             </div>
-            
+
             </div>
             <div class="form-group">
               <label >Dependency</label>
@@ -56,9 +52,9 @@
                         </select>
                     </div>
                 </div>
-             <div align="center">
-             <button class="btn btn-primary" type="submit" >Create Task</button>
-             </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit"  align="center">Create Task</button>
+                </div>
             </section>
         </form>
       </div>
@@ -66,3 +62,49 @@
     <!-- <div class="modal-footer">
     </div> -->
   </clr-modal>
+  <ngb-accordion #acc="ngbAccordion" activeIds="config-panel-one">
+        <ngb-panel  title="Task List" id="config-panel-one" >
+          <ng-template ngbPanelContent>
+                <button class="btn btn-icon" (click)="openAddTask()"><clr-icon shape="plus"></clr-icon></button>
+                <button class="btn btn-icon btn-primary"><clr-icon shape="pencil"></clr-icon></button>
+                <button class="btn btn-icon btn-danger"><clr-icon shape="trash"></clr-icon></button>
+
+          </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+    <table class="table">
+            <thead>
+                <tr>
+                    <th class="left">Wizard</th>
+                    <th>Allegiance</th>
+                    <th>Triwizard Champion?</th>
+                    <th>Can Cast Fireball</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="left">Harry</td>
+                    <td>Gryffindor</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td class="left">Gandalf</td>
+                    <td>Hobbits</td>
+                    <td>Maybe?</td>
+                    <td>I don&apos;t think so...</td>
+                </tr>
+                <tr>
+                    <td class="left">Obi-Wan Kenobi</td>
+                    <td>Republic/Rebellion</td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td class="left">Merlin</td>
+                    <td>King Arthur</td>
+                    <td>Probably invented the tournament</td>
+                    <td>Solid maybe</td>
+                </tr>
+            </tbody>
+        </table>

@@ -1,0 +1,545 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>CretoApp documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	    <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">CretoApp documentation</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="./index.html">CretoApp documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="./overview.html" 
+                                         href="./overview.html" 
+                                        >
+                                        <span class="fa fa-fw fa-th"></span>Overview
+                                    </a>
+                                </li>
+                                <li class="link">
+                                  <a href="./index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                        <a href="./contributing.html"
+                                     class="active" >
+                                        <span class="fa fa-fw fa-file-text-o"></span>CONTRIBUTING
+                                    </a>
+                                </li>
+                                <li class="link">
+                                    <a href="./dependencies.html"
+                                        
+                                        >
+                                        <span class="fa fa-fw fa-list"></span>Dependencies
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            >
+                                <span class="fa fa-fw fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
+                        </a>
+                        <ul class="links collapse "
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="./modules/AppModule.html" >AppModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./modules/ComponentModule.html" >ComponentModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-fw fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="./components/AboutComponent.html" >AboutComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./components/AppComponent.html" >AppComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./components/DashboardComponent.html" >DashboardComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./components/DiscussionWindowComponent.html" >DiscussionWindowComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./components/HomeComponent.html" >HomeComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./components/KnowledgeBaseComponent.html" >KnowledgeBaseComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./components/LoginComponent.html" >LoginComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./components/SignUpComponent.html" >SignUpComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./components/TaskViewComponent.html" >TaskViewComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./components/TrackHoursComponent.html" >TrackHoursComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
+                            <span class="fa fa-fw fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="./classes/Task.html" >Task</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./classes/User.html" >User</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-injectables-links"
+                            >
+                            <span class="fa fa-fw fa-long-arrow-down"></span>
+                            <span>Injectables</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-injectables-links"
+                            >
+                                <li class="link">
+                                    <a href="./injectables/AuthGuard.html" >AuthGuard</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./injectables/FirestoreService.html" >FirestoreService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./injectables/LoginService.html" >LoginService</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-miscellaneous-links"
+                            >
+                            <span class="fa fa-fw fa-cubes"></span>
+                            <span>Miscellaneous</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-miscellaneous-links"
+                            >
+                                <li class="link">
+                                  <a href="./miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                        <li class="chapter">
+                            <a data-type="chapter-link" href="./routes.html" ><span class="fa fa-fw fa-code-fork"></span>Routes</a>
+                        </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./coverage.html" ><span class="fa fa-fw fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                        <img src="./images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="./index.html">CretoApp documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="./overview.html" 
+                                                href="./overview.html" 
+                                               >
+                                               <span class="fa fa-fw fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="./index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                               <a href="./contributing.html"
+                                            class="active" >
+                                               <span class="fa fa-fw fa-file-text-o"></span>CONTRIBUTING
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./dependencies.html"
+                                               
+                                               >
+                                               <span class="fa fa-fw fa-list"></span>Dependencies
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   >
+                                       <span class="fa fa-fw fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
+                               </a>
+                               <ul class="links collapse "
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="./modules/AppModule.html" >AppModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./modules/ComponentModule.html" >ComponentModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-fw fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="./components/AboutComponent.html" >AboutComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./components/DashboardComponent.html" >DashboardComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./components/DiscussionWindowComponent.html" >DiscussionWindowComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./components/HomeComponent.html" >HomeComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./components/KnowledgeBaseComponent.html" >KnowledgeBaseComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./components/LoginComponent.html" >LoginComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./components/SignUpComponent.html" >SignUpComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./components/TaskViewComponent.html" >TaskViewComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./components/TrackHoursComponent.html" >TrackHoursComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
+                                   <span class="fa fa-fw fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="./classes/Task.html" >Task</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./classes/User.html" >User</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#injectables-links"
+                   >
+                                   <span class="fa fa-fw fa-long-arrow-down"></span>
+                                   <span>Injectables</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="injectables-links"
+                   >
+                                       <li class="link">
+                                           <a href="./injectables/AuthGuard.html" >AuthGuard</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./injectables/FirestoreService.html" >FirestoreService</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./injectables/LoginService.html" >LoginService</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#miscellaneous-links"
+                   >
+                                   <span class="fa fa-fw fa-cubes"></span>
+                                   <span>Miscellaneous</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="miscellaneous-links"
+                   >
+                                       <li class="link">
+                                         <a href="./miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                               <li class="chapter">
+                                   <a data-type="chapter-link" href="./routes.html" ><span class="fa fa-fw fa-code-fork"></span>Routes</a>
+                               </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./coverage.html" ><span class="fa fa-fw fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
+                                               <img src="./images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="contributing-to-clarity-seed">Contributing to clarity-seed</h1>
+<p>The clarity-seed project team welcomes contributions from the community. Follow the guidelines to contribute to the seed.</p>
+<h2 id="contribution-guidelines">Contribution Guidelines</h2>
+<p>Before you start working with Clarity, please complete the following steps:</p>
+<ul>
+<li>Read our <a href="/CODE_OF_CONDUCT.md">code of conduct</a>.</li>
+<li>Read our <a href="https://cla.vmware.com/dco">Developer Certificate of Origin</a>. All contributions to this repository must be signed as described on that page. Your signature certifies that you wrote the patch or have the right to pass it on as an open-source patch.</li>
+</ul>
+<h2 id="contribution-flow">Contribution Flow</h2>
+<p>Here are the typical steps in a contributor&#39;s workflow:</p>
+<ul>
+<li><a href="https://help.github.com/articles/fork-a-repo/">Fork</a> the main Clarity seed repository. </li>
+<li>Clone your fork and set the upstream remote to the main Clarity repository.</li>
+<li>Set your name and e-mail in the Git configuration for signing.</li>
+<li>Create a topic branch from where you want to base your work.</li>
+<li>Make commits of logical units.</li>
+<li>Make sure your commit messages are in the proper format (see below).</li>
+<li>Push your changes to a topic branch in your fork of the repository.</li>
+<li><a href="https://help.github.com/articles/about-pull-requests/">Submit a pull request</a>.</li>
+</ul>
+<p>Example:</p>
+<pre class="line-numbers"><code class="language-shell"># Clone your forked repository
+git clone git&#64;github.com:&lt;github username&gt;/clarity-seed.git
+
+# Navigate to the directory
+cd clarity-seed
+
+# Set name and e-mail configuration
+git config user.name &quot;John Doe&quot;
+git config user.email johndoe&#64;example.com
+
+# Setup the upstream remote
+git remote add upstream https://github.com/vmware/clarity-seed.git
+
+# Create a topic branch for your changes
+git checkout -b my-new-feature master
+
+# After making the desired changes, commit and push to your fork
+git commit -a -s
+git push origin my-new-feature</code></pre><h3 id="staying-in-sync-with-upstream">Staying In Sync With Upstream</h3>
+<p>When your branch gets out of sync with the master branch, use the following to update:</p>
+<pre class="line-numbers"><code class="language-shell">git checkout my-new-feature
+git fetch -a
+git pull --rebase upstream master
+git push --force-with-lease origin my-new-feature</code></pre><h3 id="updating-pull-requests">Updating Pull Requests</h3>
+<p>If your PR fails to pass CI, or requires changes based on code review, you&#39;ll most likely want to squash these changes into existing commits.</p>
+<p>If your pull request contains a single commit, or your changes are related to the most recent commit, you can amend the commit.</p>
+<pre class="line-numbers"><code class="language-shell">git add .
+git commit --amend
+git push --force-with-lease origin my-new-feature</code></pre><p>If you need to squash changes into an earlier commit, use the following:</p>
+<pre class="line-numbers"><code class="language-shell">git add .
+git commit --fixup &lt;commit&gt;
+git rebase -i --autosquash master
+git push --force-with-lease origin my-new-feature</code></pre><p>Make sure you add a comment to the PR indicating that your changes are ready to review. GitHub does not generate a notification when you use git push.</p>
+<h3 id="formatting-commit-messages">Formatting Commit Messages</h3>
+<p>Use this format for your commit message:</p>
+<pre class="line-numbers"><code class="language-none">&lt;detailed commit message&gt;
+&lt;BLANK LINE&gt;
+&lt;reference to closing an issue&gt;
+&lt;BLANK LINE&gt;
+Signed-off-by: Your Name &lt;your.email&#64;example.com&gt;</code></pre><h4 id="writing-guidelines">Writing Guidelines</h4>
+<p>These documents provide guidance creating a well-crafted commit message:</p>
+<ul>
+<li><a href="http://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a></li>
+<li><a href="https://help.github.com/articles/closing-issues-via-commit-messages/">Closing Issues Via Commit Messages</a></li>
+</ul>
+<h2 id="reporting-bugs-and-creating-issues">Reporting Bugs and Creating Issues</h2>
+<p>You can submit an issue or a bug to our <a href="https://github.com/vmware/clarity-seed/issues">GitHub repository</a>.  You must provide:</p>
+<ul>
+<li>Instruction on how to replicate the issue</li>
+<li>The version number of Angular</li>
+<li>The version number of Clarity</li>
+<li>The version number of Node</li>
+<li>The browser name and version number</li>
+<li>The OS running the seed</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 0;</script>
+
+       <script src="./js/search/search.js"></script>
+       <script src="./js/search/lunr.min.js"></script>
+       <script src="./js/search/search-lunr.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+       <script src="./js/search/search_index.js"></script>
+
+
+    </body>
+</html>

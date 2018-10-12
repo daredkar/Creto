@@ -15,6 +15,8 @@ import 'hammerjs';
 import { environment } from 'environments/environment';
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import { AngularFirestoreModule } from "angularfire2/firestore";
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
     declarations: [
@@ -30,7 +32,8 @@ import { AngularFirestoreModule } from "angularfire2/firestore";
         ComponentModule,
         AngularFireModule.initializeApp(environment.firebase),
         AngularFirestoreModule.enablePersistence(),
-        AngularFireDatabaseModule
+        AngularFireDatabaseModule,
+        NgbModule.forRoot()
     ],
     providers: [AuthGuard],
     bootstrap: [AppComponent]

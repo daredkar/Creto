@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClarityModule } from 'clarity-angular';
 import { ROUTING } from "../app-routing/app.routing";
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from "./about/about.component";
 import "hammerjs";
@@ -27,6 +30,7 @@ import { DiscussionWindowComponent } from './discussion-window/discussion-window
     ROUTING,
     ReactiveFormsModule,
     FormsModule,
+    NgbModule
   ],
   declarations: [
     HomeComponent,
